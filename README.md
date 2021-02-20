@@ -9,7 +9,7 @@ In this project, Python was used to explore data related to bike share systems f
 The written code allows to calculate some basic statistics and create an interactive environment where a user chooses data and filters for a set of data to analyze.
 
 ### Files used
-Include the files used
+bikeshare.py
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
