@@ -12,4 +12,10 @@ The written code allows to calculate some basic statistics and create an interac
 bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+.Richard Kalehoff (Udacity mentor)
+
+https://github.com/richardkalehoff
+
+.Juno Lee (Udacity Mentor)
+
+https://github.com/junolee
