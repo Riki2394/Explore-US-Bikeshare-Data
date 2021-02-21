@@ -61,12 +61,12 @@ def load_data(city, month, day):
     df["Start Time"] = pd.to_datetime(df["Start Time"])
     df["month"] = df["Start Time"].dt.month
     df["day_of_week"] = df["Start Time"].dt.day_name()
-    
+
     if month != "all":
         months = ["january", "february", "march", "april", "may", "june"]
         month = months.index(month) + 1
         df = df[df["month"] == month]
-        
+
     if day != "all":
         df[df["day_of_week"] == day.title()]
 
@@ -97,9 +97,13 @@ def time_stats(df):
     print("Most common sart hour : {}".format(start_hour).title())
 
 
+    latest_start_hour = df["hour"].max()
+    print("Latest start hour : {}".format(latest_start_hour).title())
+
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
     time.sleep(2)
 
 
@@ -126,7 +130,7 @@ def station_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
     time.sleep(2)
 
 
@@ -148,7 +152,7 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
     time.sleep(2)
 
 
@@ -167,7 +171,7 @@ def user_stats(df):
     if "Gender" in df.columns :
         gender_counts = df["Gender"].value_counts()
         print("Count of gender : {}".format(gender_counts).title())
-        
+
     else:
         print("Count of gender : No data available".title())
 
@@ -176,31 +180,31 @@ def user_stats(df):
     try:
         earliest_yob = df["Birth Year"].min()
         print("Earliest year of birth : {}".format(earliest_yob).title())
-        
+
     except KeyError:
         print("Earliest year of birth : Sorry, no information available".title())
-        
-        
+
+
     try:
         most_recent_yob = df["Birth Year"].max()
         print("Most recent year of birth : {}".format(most_recent_yob).title())
-        
+
     except KeyError:
         print("Most recent year of birth : Sorry, no information available".title())
-        
-        
+
+
     try:
         most_common_yob = df["Birth Year"].mode()[0]
         print("Most common year of birth : {}".format(most_common_yob).title())
-        
+
     except KeyError:
         print("Most common year of birth : Sorry, no information available".title())
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
-    
+
+
 def display_data(df):
     pd.set_option('display.max_columns',200)
     view_data = input("\nWould you like to view 5 rows of individual trip data? Enter yes or no\n")
@@ -224,8 +228,8 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         display_data(df)
-    
-    
+
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             int(input("Please help us to improve, rate our service with a score from 1 to 5(only int) :"))
