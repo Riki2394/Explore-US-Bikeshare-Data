@@ -101,6 +101,10 @@ def time_stats(df):
     print("Latest start hour : {}".format(latest_start_hour).title())
 
 
+    earliest_start_hour = df["hour"].min()
+    print("Earliest start hour : {}".format(earliest_start_hour).title())
+
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
