@@ -10,6 +10,9 @@ The written code allows to calculate some basic statistics and create an interac
 
 ### Files used
 bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
 .Richard Kalehoff (Udacity mentor)
