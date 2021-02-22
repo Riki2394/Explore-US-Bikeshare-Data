@@ -9,10 +9,10 @@ In this project, Python was used to explore data related to bike share systems f
 The written code allows to calculate some basic statistics and create an interactive environment where a user chooses data and filters for a set of data to analyze.
 
 ### Files used
-bikeshare.py
-chicago.csv
-new_york_city.csv
-washington.csv
+.bikeshare.py
+.chicago.csv
+.new_york_city.csv
+.washington.csv
 
 ### Credits
 .Richard Kalehoff (Udacity mentor)
